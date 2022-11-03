@@ -1,9 +1,12 @@
+.. index::
+   single: Project setup
+
 Create a new documentation
 --------------------------
 
 To create a new documentation first create a new folder. Then open the shell, navigate to the new folder and type:
 
-.. code-block::
+.. code-block:: text
 
    $ sphinx-quickstart
 

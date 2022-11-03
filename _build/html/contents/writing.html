@@ -36,21 +36,86 @@
             
   <section id="writing-your-documentation">
 <h1>Writing your documentation<a class="headerlink" href="#writing-your-documentation" title="Permalink to this heading">¶</a></h1>
+<section id="directives">
+<span id="index-0"></span><h2>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">¶</a></h2>
 <p>You can use <em>reStructuredText</em> directives to define the content of your documentation. Directives can have arguments, options and content. One example is the <strong>toctree</strong> (table of contents tree) directive which is used in the index.rst file to connect multiple files to a single hierarchy of documents. Just add the files you want to include after the <strong>toctree</strong> directive.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
-       <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
-       <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Contents</span><span class="p">:</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.. toctree::
+       :maxdepth: 2
+       :caption: Contents:
 
-       <span class="n">contents</span><span class="o">/</span><span class="n">installation</span><span class="o">.</span><span class="n">rst</span>
-       <span class="n">contents</span><span class="o">/</span><span class="n">new</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">rst</span>
-       <span class="n">contents</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">rst</span>
-       <span class="n">contents</span><span class="o">/</span><span class="n">writing</span><span class="o">.</span><span class="n">rst</span>
+       contents/installation.rst
+       contents/new-project.rst
+       contents/build.rst
+       contents/writing.rst
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line">In the following a selection of important elements for documentations will be explained. Many more directives can be found under</div>
 <div class="line"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html</a>.</div>
 </div>
+</section>
+<section id="text-highlighting">
+<span id="index-1"></span><h2>Text highlighting<a class="headerlink" href="#text-highlighting" title="Permalink to this heading">¶</a></h2>
+<p>Text can easily be highlighted inline using one asterisk before and after a word. This will display the word in italics. Two asterisks lead to an even more highlighted presentation.</p>
+<ul class="simple">
+<li><p>one asterisk for emphasis: <code class="docutils literal notranslate"><span class="pre">*text*</span></code></p></li>
+<li><p>two asterisks for strong emphasis: <code class="docutils literal notranslate"><span class="pre">**text**</span></code></p></li>
+<li><p>backquotes for code samples: <code class="docutils literal notranslate"><span class="pre">``text``</span></code></p></li>
+</ul>
+<p id="index-2">Headings can be highlighted be underlining (and optionally overlining) the section title with a punctuation character, at least as long as the text. The following heading and section types are supported.</p>
+<ul class="simple">
+<li><p># with overline, for parts</p></li>
+<li><p>* with overline, for chapters</p></li>
+<li><p>= for sections</p></li>
+<li><p>- for subsections</p></li>
+<li><p>^ for subsubsections</p></li>
+<li><p>&quot; for paragraphs</p></li>
+</ul>
+</section>
+<section id="lists">
+<span id="index-3"></span><h2>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">¶</a></h2>
+<p>If an asterisk is written in front of a line it symbolized an item of an bulleted list. Numbered lists can be created using the hashtag symbol or by writing the item numbers.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>* This code creates a bulleted list.
+* It has two items, the second item
+  uses two lines.
+
+1. This code creates a numbered list.
+2. It also has two items.
+
+#. This code creates a numbered list.
+#. The items are autonumbered.
+</pre></div>
+</div>
+<p>You can also nest list of different types.</p>
+</section>
+<section id="images">
+<span id="index-4"></span><h2>Images<a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h2>
+<p>To visualize certain aspects you can use images. The following code snippet shows the usage of the image directive.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.. image:: name.png
+   (options)
+</pre></div>
+</div>
+<p>In the options the image width and height can be specified.</p>
+</section>
+<section id="code-blocks">
+<span id="index-5"></span><h2>Code blocks<a class="headerlink" href="#code-blocks" title="Permalink to this heading">¶</a></h2>
+<p>Finally, you can embed code examples into your documentation by adding a code block directive. In the argument of the directive a programming language can be specified for syntax highlighting.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">..</span><span class="w"> </span><span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span><span class="w"> </span><span class="n">java</span><span class="w"></span>
+
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">   </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If you don’t want sytax highlighting you can set the argument to “none” or “text”.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.. code-block:: text
+
+   public static void main(String[] args) {
+
+   }
+</pre></div>
+</div>
+</section>
 </section>
 
 
@@ -75,7 +140,14 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="new-project.html">Create a new documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build.html">Building the documentation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing your documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing your documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#directives">Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#text-highlighting">Text highlighting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-blocks">Code blocks</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">

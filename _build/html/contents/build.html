@@ -36,17 +36,17 @@
           <div class="body" role="main">
             
   <section id="building-the-documentation">
-<h1>Building the documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this heading">¶</a></h1>
+<span id="index-0"></span><h1>Building the documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this heading">¶</a></h1>
 <p>After you make changes to the source code you must build the project to see the results. To do so, you can open a shell, navigate to the project root and run the folowing command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sphinx-build -b html sourcedir builddir
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ sphinx-build -b html sourcedir builddir
 </pre></div>
 </div>
 <p>When initializing your project using sphinx-quickstart, a Makefile is added to the directory. This allows to create your HTML pages using a shorter command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make html
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ make html
 </pre></div>
 </div>
-<p>Running “make” without an argument will show you which targets are available. For example, this shows that you can build to a PDF file using the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make latexpdf
+<p id="index-1">Running “make” without an argument will show you which targets are available. For example, this shows that you can build to a PDF file using the following command:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ make latexpdf
 </pre></div>
 </div>
 <p>Please note that this requires a LaTeX engine to be installed on your machine.</p>

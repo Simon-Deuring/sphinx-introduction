@@ -22,8 +22,10 @@ Sphinx is a documentation generator that can also be used to generate blogs, web
 .. Comment: The pipe symbol is used to add an empty line here
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
+
+.. https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#index-generating-markup
+.. Module index: * :ref:`modindex`
