@@ -4,6 +4,6 @@ Sphinx is a documentation generator that can also be used to generate blogs, web
 
 Before you start you need to install Sphinx on your local machine as described [here](https://www.sphinx-doc.org/en/master/usage/installation.html). Then you can clone this repository and build the documentation using `make html` from the shell. This command generates an HTML page under "_build/html" which you can open with a web browser of your choice. The Sphinx guide looks like this:
 
-![Sphinx](https://user-images.githubusercontent.com/33379546/200267636-4e80663c-8901-419b-bcb0-ca8b60790271.png)
+![Sphinx](https://user-images.githubusercontent.com/33379546/200271463-74f90fdd-0e9d-45f9-b477-22b8489a5a32.png)
 
 If you want to start even faster you can visit the online version of this Sphinx guide under [https://simon-deuring.github.io/sphinx-introduction](https://simon-deuring.github.io/sphinx-introduction).
